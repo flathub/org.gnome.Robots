@@ -1,9 +1,25 @@
 {
     "app-id": "org.gnome.Robots",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
+    "sdk-extensions" : [
+        "org.freedesktop.Sdk.Extension.rust-stable"
+    ],
     "command": "gnome-robots",
+    "build-options" : {
+        "append-path" : "/usr/lib/sdk/rust-stable/bin",
+        "env" : {
+            "CARGO_HOME" : "/run/build/rust-flatpak/cargo"
+        },
+        "build-args" : [
+            "--share=network"
+        ],
+        "test-args" : [
+            "--socket=x11",
+            "--share=network"
+        ]
+    },
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", 
@@ -53,12 +69,8 @@
             "buildsystem": "meson",
             "sources": [{
                 "type": "archive",
-                "url": "https://download.gnome.org/sources/gnome-robots/40/gnome-robots-40.0.tar.xz",
-                "sha256": "6fbf2f885750f1a5110a724f8f35addd9bc61184ee31cf0c0cb89953e4f4cb11"
-            },
-            {
-                "type": "patch",
-                "path": "fix_appdata.patch"
+                "url": "https://download.gnome.org/sources/gnome-robots/41/gnome-robots-41.2.tar.xz",
+                "sha256": "9121c2f836812043feef2ba661cd5d0fd48e3d6319c43941b9fdd158b9b0eb91"
             }]
         }
     ]
