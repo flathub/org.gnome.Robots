@@ -15,7 +15,13 @@
         "--device=dri"
     ],
     "build-options": {
-        "append-path": "/usr/lib/sdk/rust-stable/bin"
+        "append-path": "/usr/lib/sdk/rust-stable/bin",
+        "env": {
+            "CARGO_HOME": "/run/build/rust-flatpak/cargo"
+        },
+        "test-args": [
+            "--socket=x11"
+        ]
     },
     "cleanup": [
         "/include",
@@ -28,47 +34,10 @@
         "/share/gtk-doc",
         "/share/man",
         "/share/pkgconfig",
-        "/share/vala",
         "*.la",
         "*.a"
     ],
     "modules": [
-        {
-            "name": "libgnome-games-support",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgnome-games-support/1.8/libgnome-games-support-1.8.2.tar.xz",
-                    "sha256": "28434604a7b038731ac0231731388ff104f565bb2330cc24e78cda04cfd3ef7d",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "libgnome-games-support",
-                        "versions": {
-                            "<": "2.0"
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "name": "gsound",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gsound/1.0/gsound-1.0.3.tar.xz",
-                    "sha256": "ca2d039e1ebd148647017a7f548862350bc9af01986d39f10cfdc8e95f07881a",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gsound"
-                    }
-                }
-            ],
-            "modules": [
-                "shared-modules/libcanberra/libcanberra.json"
-            ]
-        },
         {
             "name": "gnome-robots",
             "buildsystem": "meson",
