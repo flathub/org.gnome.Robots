@@ -44,8 +44,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-robots/41/gnome-robots-41.2.tar.xz",
-                    "sha256": "9121c2f836812043feef2ba661cd5d0fd48e3d6319c43941b9fdd158b9b0eb91",
+                    "url": "https://download.gnome.org/sources/gnome-robots/50/gnome-robots-50.0.tar.xz",
+                    "sha256": "617e574c15f90618b82493c9939d717596ad2ce1ff1de0aad5c9c3976633d379",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-robots"
