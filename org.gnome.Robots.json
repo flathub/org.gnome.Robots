@@ -43,13 +43,9 @@
             "buildsystem": "meson",
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-robots/41/gnome-robots-41.2.tar.xz",
-                    "sha256": "9121c2f836812043feef2ba661cd5d0fd48e3d6319c43941b9fdd158b9b0eb91",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gnome-robots"
-                    }
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/gnome-robots.git",
+                    "commit": "46b3e823a7412c5ddb0e0ed2abc3a7f40ba7d852"
                 },
                 "generated-sources.json",
                 {
