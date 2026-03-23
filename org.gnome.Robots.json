@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Robots",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions": [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -23,20 +23,6 @@
             "--socket=x11"
         ]
     },
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/man",
-        "/share/aclocal",
-        "/share/doc",
-        "/share/gdm",
-        "/share/gnome",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
-    ],
     "modules": [
         {
             "name": "gnome-robots",
