@@ -34,7 +34,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/gnome-robots.git",
-                    "commit": "5d139344728042e3461da2dce48156650322f7ce"
+                    "commit": "38d4d5f64c5244455b5d796759abe7ed885d5f20"
                 },
                 "generated-sources.json",
                 {
